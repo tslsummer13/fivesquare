@@ -2,10 +2,12 @@ class NeighborhoodsController < ApplicationController
 
   def index
     @neighborhoods = Neighborhood.all
+    @json = @neighborhoods.to_gmaps4rails
   end
 
   def show
     @neighborhood = Neighborhood.find_by_id(params[:id])
+    @json = @neighborhood.businesses.to_gmaps4rails
   end
 
   def new
@@ -19,7 +21,7 @@ class NeighborhoodsController < ApplicationController
     @neighborhood.demographics = params[:demographics]
     @neighborhood.image_url = params[:image_url]
     @neighborhood.center = params[:center]
-    
+
     if @neighborhood.save
       redirect_to neighborhoods_url
     else
@@ -38,7 +40,7 @@ class NeighborhoodsController < ApplicationController
     @neighborhood.demographics = params[:demographics]
     @neighborhood.image_url = params[:image_url]
     @neighborhood.center = params[:center]
-    
+
     if @neighborhood.save
       redirect_to neighborhoods_url
     else

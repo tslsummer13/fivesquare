@@ -26,6 +26,8 @@
 
 <h3>Popular businesses</h3>
 
+<%= gmaps4rails(@json) %>
+
 <ul>
 <% @neighborhood.businesses.each do |business| %>
   <li><%= link_to business.name, business.yelp_url %></li>

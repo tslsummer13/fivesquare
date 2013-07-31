@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130731161831) do
+ActiveRecord::Schema.define(version: 20130731163413) do
 
   create_table "businesses", force: true do |t|
     t.string  "name"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20130731161831) do
     t.integer "neighborhood_id"
     t.string  "image_url"
     t.string  "address"
+    t.float   "latitude"
+    t.float   "longitude"
+    t.boolean "gmaps"
   end
 
   create_table "lines", force: true do |t|
@@ -26,11 +29,14 @@ ActiveRecord::Schema.define(version: 20130731161831) do
   end
 
   create_table "neighborhoods", force: true do |t|
-    t.string "name"
-    t.text   "history"
-    t.text   "demographics"
-    t.string "image_url"
-    t.string "center"
+    t.string  "name"
+    t.text    "history"
+    t.text    "demographics"
+    t.string  "image_url"
+    t.string  "center"
+    t.float   "latitude"
+    t.float   "longitude"
+    t.boolean "gmaps"
   end
 
   create_table "stations", force: true do |t|
