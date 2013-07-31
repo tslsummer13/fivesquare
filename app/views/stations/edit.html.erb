@@ -1,0 +1,26 @@
+<h1>Editing Station #<%= @station.id %></h1>
+
+
+<%= form_tag(station_url(@station), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address, @station.address %>
+  </div>
+
+  <div>
+    <%= label_tag :neighborhood_id %><br />
+    <%= number_field_tag :neighborhood_id, @station.neighborhood_id %>
+  </div>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @station.name %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Station" %>
+  </div>
+
+<% end %>

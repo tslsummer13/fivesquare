@@ -1,0 +1,32 @@
+<h1>Stations</h1>
+
+<p><%= link_to 'Add a New Station', new_station_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Neighborhood</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @stations.each do |station| %>
+    <tr>
+      <td><%= station.address %></td>
+      <td><%= station.neighborhood_id %></td>
+      <td><%= station.name %></td>
+  
+      <td><%= link_to 'Show', station_url(station) %></td>
+      <td><%= link_to 'Edit', edit_station_url(station) %></td>
+      <td><%= link_to 'Destroy', station_url(station), method: 'delete', data: { confirm: "Do you really want to delete this station?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

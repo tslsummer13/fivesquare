@@ -1,0 +1,16 @@
+<h1>New Line</h1>
+
+
+<%= form_tag(lines_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :color %><br />
+    <%= text_field_tag :color %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Create Line" %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<h1>Neighborhoods</h1>
+
+<p><%= link_to 'Add a New Neighborhood', new_neighborhood_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>History</th>
+      <th>Demographics</th>
+      <th>Image url</th>
+      <th>Center</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @neighborhoods.each do |neighborhood| %>
+    <tr>
+      <td><%= neighborhood.history %></td>
+      <td><%= neighborhood.demographics %></td>
+      <td><%= neighborhood.image_url %></td>
+      <td><%= neighborhood.center %></td>
+  
+      <td><%= link_to 'Show', neighborhood_url(neighborhood) %></td>
+      <td><%= link_to 'Edit', edit_neighborhood_url(neighborhood) %></td>
+      <td><%= link_to 'Destroy', neighborhood_url(neighborhood), method: 'delete', data: { confirm: "Do you really want to delete this neighborhood?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

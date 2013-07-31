@@ -1,0 +1,46 @@
+<h1>Editing Business #<%= @business.id %></h1>
+
+
+<%= form_tag(business_url(@business), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @business.name %>
+  </div>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address, @business.address %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone, @business.phone %>
+  </div>
+
+  <div>
+    <%= label_tag :category %><br />
+    <%= text_field_tag :category, @business.category %>
+  </div>
+
+  <div>
+    <%= label_tag :neighborhood_id %><br />
+    <%= number_field_tag :neighborhood_id, @business.neighborhood_id %>
+  </div>
+
+  <div>
+    <%= label_tag :hours %><br />
+    <%= text_field_tag :hours, @business.hours %>
+  </div>
+
+  <div>
+    <%= label_tag :image_url %><br />
+    <%= text_field_tag :image_url, @business.image_url %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Business" %>
+  </div>
+
+<% end %>

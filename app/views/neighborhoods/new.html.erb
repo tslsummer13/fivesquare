@@ -1,0 +1,31 @@
+<h1>New Neighborhood</h1>
+
+
+<%= form_tag(neighborhoods_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :history %><br />
+    <%= text_area_tag :history %>
+  </div>
+
+  <div>
+    <%= label_tag :demographics %><br />
+    <%= text_area_tag :demographics %>
+  </div>
+
+  <div>
+    <%= label_tag :image_url %><br />
+    <%= text_field_tag :image_url %>
+  </div>
+
+  <div>
+    <%= label_tag :center %><br />
+    <%= text_field_tag :center %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Create Neighborhood" %>
+  </div>
+<% end %>

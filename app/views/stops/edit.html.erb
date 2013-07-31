@@ -1,0 +1,21 @@
+<h1>Editing Stop #<%= @stop.id %></h1>
+
+
+<%= form_tag(stop_url(@stop), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :line_id %><br />
+    <%= number_field_tag :line_id, @stop.line_id %>
+  </div>
+
+  <div>
+    <%= label_tag :station_id %><br />
+    <%= number_field_tag :station_id, @stop.station_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Stop" %>
+  </div>
+
+<% end %>

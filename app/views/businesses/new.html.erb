@@ -1,0 +1,46 @@
+<h1>New Business</h1>
+
+
+<%= form_tag(businesses_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone %>
+  </div>
+
+  <div>
+    <%= label_tag :category %><br />
+    <%= text_field_tag :category %>
+  </div>
+
+  <div>
+    <%= label_tag :neighborhood_id %><br />
+    <%= number_field_tag :neighborhood_id %>
+  </div>
+
+  <div>
+    <%= label_tag :hours %><br />
+    <%= text_field_tag :hours %>
+  </div>
+
+  <div>
+    <%= label_tag :image_url %><br />
+    <%= text_field_tag :image_url %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Create Business" %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<h1>Stops</h1>
+
+<p><%= link_to 'Add a New Stop', new_stop_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line</th>
+      <th>Station</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @stops.each do |stop| %>
+    <tr>
+      <td><%= stop.line_id %></td>
+      <td><%= stop.station_id %></td>
+  
+      <td><%= link_to 'Show', stop_url(stop) %></td>
+      <td><%= link_to 'Edit', edit_stop_url(stop) %></td>
+      <td><%= link_to 'Destroy', stop_url(stop), method: 'delete', data: { confirm: "Do you really want to delete this stop?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

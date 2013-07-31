@@ -1,0 +1,31 @@
+<h1>Editing Neighborhood #<%= @neighborhood.id %></h1>
+
+
+<%= form_tag(neighborhood_url(@neighborhood), method: 'patch') do %>
+
+  <div>
+    <%= label_tag :history %><br />
+    <%= text_area_tag :history, @neighborhood.history %>
+  </div>
+
+  <div>
+    <%= label_tag :demographics %><br />
+    <%= text_area_tag :demographics, @neighborhood.demographics %>
+  </div>
+
+  <div>
+    <%= label_tag :image_url %><br />
+    <%= text_field_tag :image_url, @neighborhood.image_url %>
+  </div>
+
+  <div>
+    <%= label_tag :center %><br />
+    <%= text_field_tag :center, @neighborhood.center %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Neighborhood" %>
+  </div>
+
+<% end %>
