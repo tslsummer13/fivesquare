@@ -16,13 +16,24 @@
 </p>
 
 <p>
-  <b>Image url:</b>
-  <%= @neighborhood.image_url %>
+  <%= image_tag @neighborhood.image_url, width: 400 %>
 </p>
 
 <p>
   <b>Center:</b>
   <%= @neighborhood.center %>
 </p>
+
+<h3>Popular businesses</h3>
+
+<ul>
+<% @neighborhood.businesses.each do |business| %>
+  <li><%= link_to business.name, business.yelp_url %></li>
+<% end %>
+</ul>
+
+
+
+
 
 
