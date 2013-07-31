@@ -6,12 +6,10 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>Category</th>
+      <th>Yelp url</th>
       <th>Neighborhood</th>
-      <th>Hours</th>
       <th>Image url</th>
+      <th>Address</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,13 +20,11 @@
   <% @businesses.each do |business| %>
     <tr>
       <td><%= business.name %></td>
-      <td><%= business.address %></td>
-      <td><%= business.phone %></td>
-      <td><%= business.category %></td>
-      <td><%= business.neighborhood_id %></td>
-      <td><%= business.hours %></td>
+      <td><%= business.yelp_url %></td>
+      <td><%= business.neighborhood.name %></td>
       <td><%= business.image_url %></td>
-  
+      <td><%= business.address %></td>
+
       <td><%= link_to 'Show', business_url(business) %></td>
       <td><%= link_to 'Edit', edit_business_url(business) %></td>
       <td><%= link_to 'Destroy', business_url(business), method: 'delete', data: { confirm: "Do you really want to delete this business?" } %></td>

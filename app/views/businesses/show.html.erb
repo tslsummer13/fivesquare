@@ -6,33 +6,23 @@
 </p>
 
 <p>
-  <b>Address:</b>
-  <%= @business.address %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @business.phone %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @business.category %>
+  <b>Yelp url:</b>
+  <%= @business.yelp_url %>
 </p>
 
 <p>
   <b>Neighborhood:</b>
-  <%= @business.neighborhood_id %>
-</p>
-
-<p>
-  <b>Hours:</b>
-  <%= @business.hours %>
+  <%= @business.neighborhood.name %>
 </p>
 
 <p>
   <b>Image url:</b>
   <%= @business.image_url %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @business.address %>
 </p>
 
 

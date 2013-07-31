@@ -14,6 +14,7 @@ class NeighborhoodsController < ApplicationController
 
   def create
     @neighborhood = Neighborhood.new
+    @neighborhood.name = params[:name]
     @neighborhood.history = params[:history]
     @neighborhood.demographics = params[:demographics]
     @neighborhood.image_url = params[:image_url]
@@ -32,6 +33,7 @@ class NeighborhoodsController < ApplicationController
 
   def update
     @neighborhood = Neighborhood.find_by_id(params[:id])
+    @neighborhood.name = params[:name]
     @neighborhood.history = params[:history]
     @neighborhood.demographics = params[:demographics]
     @neighborhood.image_url = params[:image_url]

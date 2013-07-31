@@ -10,33 +10,23 @@
   </div>
 
   <div>
-    <%= label_tag :address %><br />
-    <%= text_field_tag :address %>
-  </div>
-
-  <div>
-    <%= label_tag :phone %><br />
-    <%= text_field_tag :phone %>
-  </div>
-
-  <div>
-    <%= label_tag :category %><br />
-    <%= text_field_tag :category %>
+    <%= label_tag :yelp_url %><br />
+    <%= text_field_tag :yelp_url %>
   </div>
 
   <div>
     <%= label_tag :neighborhood_id %><br />
-    <%= number_field_tag :neighborhood_id %>
-  </div>
-
-  <div>
-    <%= label_tag :hours %><br />
-    <%= text_field_tag :hours %>
+    <%= select_tag :neighborhood_id, options_from_collection_for_select(Neighborhood.all, :id, :name) %>
   </div>
 
   <div>
     <%= label_tag :image_url %><br />
     <%= text_field_tag :image_url %>
+  </div>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address %>
   </div>
 
 

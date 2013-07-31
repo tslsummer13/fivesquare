@@ -15,12 +15,10 @@ class BusinessesController < ApplicationController
   def create
     @business = Business.new
     @business.name = params[:name]
-    @business.address = params[:address]
-    @business.phone = params[:phone]
-    @business.category = params[:category]
+    @business.yelp_url = params[:yelp_url]
     @business.neighborhood_id = params[:neighborhood_id]
-    @business.hours = params[:hours]
     @business.image_url = params[:image_url]
+    @business.address = params[:address]
     
     if @business.save
       redirect_to businesses_url
@@ -36,12 +34,10 @@ class BusinessesController < ApplicationController
   def update
     @business = Business.find_by_id(params[:id])
     @business.name = params[:name]
-    @business.address = params[:address]
-    @business.phone = params[:phone]
-    @business.category = params[:category]
+    @business.yelp_url = params[:yelp_url]
     @business.neighborhood_id = params[:neighborhood_id]
-    @business.hours = params[:hours]
     @business.image_url = params[:image_url]
+    @business.address = params[:address]
     
     if @business.save
       redirect_to businesses_url

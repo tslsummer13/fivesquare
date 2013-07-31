@@ -4,6 +4,11 @@
 <%= form_tag(neighborhood_url(@neighborhood), method: 'patch') do %>
 
   <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @neighborhood.name %>
+  </div>
+
+  <div>
     <%= label_tag :history %><br />
     <%= text_area_tag :history, @neighborhood.history %>
   </div>
