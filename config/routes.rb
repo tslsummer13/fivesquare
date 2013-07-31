@@ -1,4 +1,6 @@
 Fivesquare::Application.routes.draw do
+  root "neighborhoods#index"
+
   # Routes for the Line resource:
   # CREATE
   get '/lines/new', controller: 'lines', action: 'new', as: 'new_line'
@@ -124,7 +126,7 @@ Fivesquare::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
